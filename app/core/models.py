@@ -19,7 +19,7 @@ class UserManager(BaseUserManager):
         user = self.create_user(email, password)
         user.is_staff = True
         user.is_superuser = True
-
+        return  user
 
 class User(AbstractBaseUser, PermissionsMixin):
     """User model email instead of username"""
